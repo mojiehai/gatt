@@ -76,6 +76,7 @@ func onPeriphConnected(p gatt.Peripheral, err error) {
 			continue
 		}
 
+		fmt.Println(cs)
 		for _, c := range cs {
 			msg := "  Characteristic  " + c.UUID().String()
 			if len(c.Name()) > 0 {
@@ -127,6 +128,7 @@ func onPeriphConnected(p gatt.Peripheral, err error) {
 					continue
 				}
 			}
+			fmt.Println("================================================================================")
 
 		}
 		fmt.Println()
